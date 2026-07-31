@@ -1,0 +1,61 @@
+/* =========================================================================
+   NSBM EventHub — dashboard.css
+   Purpose: Styles for the admin dashboard: summary stat cards, quick
+   actions, recent activity feed.
+   Owner: Member 3
+   Used by: admin-dashboard.html
+   Loaded after style.css and before responsive.css.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. STAT CARDS
+   Base .stat-card styling lives in style.css; add a coloured accent bar
+   and an icon slot here for the dashboard specifically.
+   ------------------------------------------------------------------------- */
+.main--dashboard .stat-card {
+  border-top: 3px solid var(--color-primary);
+}
+
+.main--dashboard .stat-card:nth-child(2) { border-top-color: var(--color-accent); }
+.main--dashboard .stat-card:nth-child(3) { border-top-color: var(--color-success); }
+.main--dashboard .stat-card:nth-child(4) { border-top-color: var(--color-warning); }
+
+/* -------------------------------------------------------------------------
+   2. QUICK ACTIONS
+   ------------------------------------------------------------------------- */
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+/* -------------------------------------------------------------------------
+   3. RECENT ACTIVITY FEED
+   ------------------------------------------------------------------------- */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-list__item {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  padding-left: var(--space-5);
+  color: var(--color-text);
+}
+
+.activity-list__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.1em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.activity-list__item:last-child {
+  border-bottom: none;
+}

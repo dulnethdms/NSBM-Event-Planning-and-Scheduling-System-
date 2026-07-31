@@ -1,0 +1,401 @@
+/* =========================================================================
+   NSBM EventHub — GLOBAL BASE STYLES (style.css)
+   Purpose: design tokens, typography, buttons, forms, layout grid, and
+   the shared header / navbar / footer / card / table components that
+   every page in the app relies on.
+   Loaded on every page BEFORE the page-specific stylesheet, and BEFORE
+   responsive.css.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. DESIGN TOKENS
+   ------------------------------------------------------------------------- */
+:root {
+  /* Brand colours */
+  --color-primary: #1b4d3e;        /* NSBM deep green */
+  --color-primary-dark: #123529;
+  --color-primary-light: #e7f0ec;
+  --color-accent: #d98e04;         /* amber accent for CTAs / highlights */
+  --color-accent-dark: #b5730a;
+
+  /* Neutrals */
+  --color-bg: #f7f8f6;
+  --color-surface: #ffffff;
+  --color-border: #dde3e0;
+  --color-text: #1f2623;
+  --color-text-muted: #5b655f;
+  --color-text-inverse: #ffffff;
+
+  /* Status colours */
+  --color-success: #1f8a54;
+  --color-success-bg: #e6f4ec;
+  --color-warning: #b5730a;
+  --color-warning-bg: #fbf1de;
+  --color-danger: #c0392b;
+  --color-danger-bg: #fbeae8;
+
+  /* Typography */
+  --font-heading: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Layout */
+  --content-max-width: 1200px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(18, 53, 41, 0.08);
+  --shadow-md: 0 8px 24px rgba(18, 53, 41, 0.12);
+
+  /* Motion */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+}
+
+/* -------------------------------------------------------------------------
+   2. RESET / BASE ELEMENTS
+   ------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  line-height: 1.25;
+  margin: 0 0 var(--space-3);
+}
+
+h1 { font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem); }
+h2 { font-size: clamp(1.4rem, 1.2rem + 1vw, 1.9rem); }
+h3 { font-size: 1.2rem; }
+
+p {
+  margin: 0 0 var(--space-4);
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* -------------------------------------------------------------------------
+   3. ACCESSIBILITY HELPERS
+   ------------------------------------------------------------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: var(--space-3) var(--space-4);
+  z-index: 1000;
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   4. LAYOUT GRID / CONTAINERS
+   ------------------------------------------------------------------------- */
+.main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.page-heading,
+.section,
+.hero,
+.stat-grid,
+.card-grid,
+.auth-card,
+.navbar,
+.site-footer__inner {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+.section {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.section--muted {
+  background-color: var(--color-primary-light);
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section--muted > * {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+.section__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.page-heading {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-2);
+}
+
+.page-heading--with-action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+/* -------------------------------------------------------------------------
+   5. BUTTONS
+   ------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+.btn--primary:hover { background-color: var(--color-primary-dark); }
+
+.btn--secondary {
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+.btn--secondary:hover { background-color: var(--color-accent-dark); }
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.btn--danger {
+  background-color: transparent;
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+.btn--danger:hover {
+  background-color: var(--color-danger);
+  color: var(--color-text-inverse);
+}
+
+.btn--small {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+/* -------------------------------------------------------------------------
+   6. FORMS
+   ------------------------------------------------------------------------- */
+.form-field {
+  margin-bottom: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-field--inline {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-row {
+  display: flex;
+  gap: var(--space-4);
+}
+.form-row .form-field {
+  flex: 1;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 400;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.inline-form {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+.inline-form .form-field {
+  margin-bottom: 0;
+  min-width: 220px;
+}
+
+/* -------------------------------------------------------------------------
+   7. HEADER / NAVBAR (shared across all pages)
+   ------------------------------------------------------------------------- */
+.site-header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+  gap: var(--space-3);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}

@@ -1,0 +1,103 @@
+/* =========================================================================
+   NSBM EventHub — home.css
+   Purpose: Styles for the student home page: hero banner, upcoming events
+   preview, announcements strip.
+   Owner: Member 2
+   Used by: home.html
+   Loaded after style.css and before responsive.css.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. HERO BANNER
+   ------------------------------------------------------------------------- */
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-inverse);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-6);
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-7);
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.hero h1 {
+  color: var(--color-text-inverse);
+  margin-bottom: var(--space-3);
+}
+
+.hero__lead {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  max-width: 42ch;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.hero .btn--primary {
+  background-color: var(--color-accent);
+}
+.hero .btn--primary:hover {
+  background-color: var(--color-accent-dark);
+}
+
+.hero .btn--secondary {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-inverse);
+}
+.hero .btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* -------------------------------------------------------------------------
+   2. UPCOMING EVENTS PREVIEW
+   ------------------------------------------------------------------------- */
+.section__link {
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.main--home .event-card {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.main--home .event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* -------------------------------------------------------------------------
+   3. ANNOUNCEMENTS STRIP
+   ------------------------------------------------------------------------- */
+.main--home #announcements-heading {
+  margin-bottom: var(--space-3);
+}
+
+.main--home .announcement-list__item {
+  position: relative;
+  padding-left: var(--space-5);
+}
+
+.main--home .announcement-list__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}

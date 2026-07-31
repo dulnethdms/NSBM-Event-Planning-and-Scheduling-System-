@@ -1,0 +1,40 @@
+/* =========================================================================
+   NSBM EventHub — registrations.css
+   Purpose: Styles for the manage-registrations page: filter form and
+   registrations data table.
+   Owner: Member 4
+   Used by: manage-registrations.html
+   Loaded after style.css and before responsive.css.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. FILTER FORM
+   ------------------------------------------------------------------------- */
+.main--registrations .events-toolbar__form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  max-width: none;
+}
+
+.main--registrations .events-toolbar__form .form-field {
+  flex: 1 1 180px;
+  margin-bottom: 0;
+}
+
+/* -------------------------------------------------------------------------
+   2. REGISTRATIONS TABLE
+   ------------------------------------------------------------------------- */
+.main--registrations .data-table tbody tr:hover {
+  background-color: var(--color-primary-light);
+}
+
+.main--registrations .status-badge--cancelled {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+}

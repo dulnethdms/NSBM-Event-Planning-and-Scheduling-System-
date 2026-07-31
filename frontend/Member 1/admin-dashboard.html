@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reports · NSBM EventHub</title>
-  <meta name="description" content="View event and engagement reports." />
+  <title>Admin Dashboard · NSBM EventHub</title>
+  <meta name="description" content="Overview of NSBM EventHub activity." />
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="css/reports.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
   <link rel="stylesheet" href="../css/responsive.css" />
 </head>
-<body class="page-reports">
+<body class="page-dashboard">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <nav class="navbar navbar--admin" aria-label="Admin navigation">
       <div class="navbar__brand">
-        <a href="/home.html" class="navbar__logo">
+        <a href="/Member 1/admin-dashboard.html" class="navbar__logo">
           <span class="navbar__logo-mark" aria-hidden="true">NE</span>
           NSBM EventHub <span class="navbar__badge">Admin</span>
         </a>
@@ -26,71 +26,58 @@
         </button>
       </div>
       <ul id="admin-menu" class="navbar__menu">
-        <li><a href="/Member 4/admin-dashboard.html">Dashboard</a></li>
-        <li><a href="/Member 4/manage-events.html">Events</a></li>
-        <li><a href="/Member 4/manage-categories.html">Categories</a></li>
-        <li><a href="/Member 4/manage-registrations.html">Registrations</a></li>
-        <li><a href="/Member 4/manage-announcements.html">Announcements</a></li>
-        <li><a href="/Member 4/reports.html" aria-current="page">Reports</a></li>
+        <li><a href="/Member 1/admin-dashboard.html" aria-current="page">Dashboard</a></li>
+        <li><a href="/Member 1/manage-events.html">Events</a></li>
+        <li><a href="/Member 1/manage-categories.html">Categories</a></li>
+        <li><a href="/Member 1/manage-registrations.html">Registrations</a></li>
+        <li><a href="/Member 1/manage-announcements.html">Announcements</a></li>
+        <li><a href="/Member 1/reports.html">Reports</a></li>
         <li><a href="/Member 1/admin-login.html" class="navbar__link--logout">Log out</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main-content" class="main main--reports">
-    <!-- Page heading + export action -->
-    <section class="page-heading page-heading--with-action">
-      <div>
-        <h1>Reports</h1>
-        <p>Insights into event attendance and student engagement.</p>
-      </div>
-      <button type="button" class="btn btn--secondary">Export report</button>
+  <main id="main-content" class="main main--dashboard">
+    <!-- Dashboard summary stats -->
+    <section class="page-heading">
+      <h1>Admin dashboard</h1>
+      <p>An overview of activity across NSBM EventHub.</p>
     </section>
-    <!-- Report summary stats -->
-    <section class="stat-grid" aria-label="Report statistics">
+    <section class="stat-grid" aria-label="Key statistics">
       <div class="stat-card">
         <p class="stat-card__value">Placeholder</p>
-        <p class="stat-card__label">Total attendance</p>
+        <p class="stat-card__label">Total events</p>
       </div>
       <div class="stat-card">
         <p class="stat-card__value">Placeholder</p>
-        <p class="stat-card__label">Most popular category</p>
+        <p class="stat-card__label">Registrations</p>
       </div>
       <div class="stat-card">
         <p class="stat-card__value">Placeholder</p>
-        <p class="stat-card__label">Average rating</p>
+        <p class="stat-card__label">Active students</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-card__value">Placeholder</p>
+        <p class="stat-card__label">Categories</p>
       </div>
     </section>
-    <!-- Report chart placeholder + table -->
+    <!-- Quick actions + recent activity -->
     <section class="section">
-      <h2>Attendance by category</h2>
-      <div class="chart-placeholder" role="img" aria-label="Placeholder bar chart of attendance by category">
-        Chart placeholder
+      <h2>Quick actions</h2>
+      <div class="quick-actions">
+        <a href="/Member 1/create-event.html" class="btn btn--primary">Create event</a>
+        <a href="/Member 1/manage-events.html" class="btn btn--secondary">Manage events</a>
+        <a href="/Member 1/manage-announcements.html" class="btn btn--secondary">Post announcement</a>
+        <a href="/Member 1/reports.html" class="btn btn--secondary">View reports</a>
       </div>
     </section>
-    <section class="section">
-      <h2>Event performance</h2>
-      <div class="table-wrapper">
-        <table class="data-table">
-          <caption class="sr-only">Event performance report</caption>
-          <thead>
-            <tr>
-              <th scope="col">Event title</th>
-              <th scope="col">Registrations</th>
-              <th scope="col">Attendance</th>
-              <th scope="col">Rating</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Placeholder event title</td>
-              <td>Placeholder</td>
-              <td>Placeholder</td>
-              <td>Placeholder</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <section class="section section--muted" aria-labelledby="recent-activity-heading">
+      <h2 id="recent-activity-heading">Recent activity</h2>
+      <ul class="activity-list">
+        <li class="activity-list__item">Placeholder activity entry.</li>
+        <li class="activity-list__item">Placeholder activity entry.</li>
+        <li class="activity-list__item">Placeholder activity entry.</li>
+      </ul>
     </section>
 
   </main>

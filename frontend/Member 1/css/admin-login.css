@@ -1,0 +1,71 @@
+/* =========================================================================
+   NSBM EventHub — admin-login.css
+   Purpose: Styles specific to the admin login page. Extends the shared
+   auth card look (see auth.css) with darker, admin-branded framing —
+   loaded standalone since admin-login.html does not include auth.css.
+   Owner: Member 1
+   Used by: admin-login.html
+   Loaded after style.css and before responsive.css.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. PAGE LAYOUT
+   ------------------------------------------------------------------------- */
+.page-admin-login .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-7) var(--space-4);
+  min-height: calc(100vh - 64px);
+  background: radial-gradient(circle at top, var(--color-primary-dark) 0%, #0c211a 65%);
+}
+
+/* Admin nav bar sits on the dark theme too */
+.page-admin-login .site-header {
+  background-color: var(--color-primary-dark);
+  border-bottom-color: var(--color-primary-dark);
+}
+
+.page-admin-login .navbar__logo,
+.page-admin-login .navbar__menu a {
+  color: var(--color-text-inverse);
+}
+
+.page-admin-login .navbar__logo-mark {
+  background-color: var(--color-accent);
+}
+
+/* -------------------------------------------------------------------------
+   2. CARD
+   ------------------------------------------------------------------------- */
+.auth-card--admin {
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  padding: var(--space-6);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  border-top: 4px solid var(--color-accent);
+}
+
+.auth-card--admin h1 {
+  margin-bottom: var(--space-2);
+}
+
+.auth-card--admin .auth-card__intro {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.auth-card--admin .btn--block {
+  margin-top: var(--space-2);
+}
+
+/* -------------------------------------------------------------------------
+   3. STATES
+   ------------------------------------------------------------------------- */
+.auth-card--admin input:focus {
+  box-shadow: 0 0 0 3px rgba(217, 142, 4, 0.2);
+  border-color: var(--color-accent);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register · NSBM EventHub</title>
+  <meta name="description" content="Create a student account for NSBM EventHub." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body class="page-auth">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="navbar__brand">
+        <a href="/home.html" class="navbar__logo">
+          <span class="navbar__logo-mark" aria-hidden="true">NE</span>
+          NSBM EventHub
+        </a>
+      </div>
+      <ul class="navbar__menu">
+        <li><a href="/Member 1/login.html">Log in</a></li>
+        <li><a href="/Member 1/register.html" aria-current="page">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="main main--auth">
+    <!-- Registration form section -->
+    <section class="auth-card" aria-labelledby="register-heading">
+      <h1 id="register-heading">Create your student account</h1>
+      <p class="auth-card__intro">Sign up with your NSBM student email to register for university events.</p>
+      <form class="auth-form" action="#" method="post" novalidate>
+        <div class="form-field">
+          <label for="full-name">Full name</label>
+          <input type="text" id="full-name" name="full-name" autocomplete="name" required />
+        </div>
+        <div class="form-field">
+          <label for="student-id">Student ID</label>
+          <input type="text" id="student-id" name="student-id" required />
+        </div>
+        <div class="form-field">
+          <label for="email">NSBM email address</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+        </div>
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="new-password" required />
+        </div>
+        <div class="form-field">
+          <label for="confirm-password">Confirm password</label>
+          <input type="password" id="confirm-password" name="confirm-password" autocomplete="new-password" required />
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Create account</button>
+      </form>
+      <p class="auth-card__switch">Already have an account? <a href="login.html">Log in</a></p>
+    </section>
+
+  </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <p class="site-footer__title">NSBM EventHub</p>
+          <p class="site-footer__tagline">Plan, discover and manage university events in one place.</p>
+        </div>
+        <nav class="site-footer__links" aria-label="Footer navigation">
+          <a href="/home.html">Home</a>
+          <a href="/Member 2/events.html">Events</a>
+          <a href="/Member 2/my-schedule.html">My Schedule</a>
+          <a href="/Member 1/profile.html">Profile</a>
+        </nav>
+        <p class="site-footer__copy">&copy; 2026 NSBM Green University. All rights reserved.</p>
+      </div>
+    </footer>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

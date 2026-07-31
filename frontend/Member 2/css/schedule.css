@@ -1,0 +1,81 @@
+/* =========================================================================
+   NSBM EventHub — schedule.css
+   Purpose: Styles for the student's personal schedule / registered
+   events list.
+   Owner: Member 2
+   Used by: my-schedule.html
+   Loaded after style.css and before responsive.css.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. SCHEDULE LIST
+   ------------------------------------------------------------------------- */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.schedule-item__date {
+  flex-shrink: 0;
+  width: 4.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.schedule-item__day {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+}
+
+.schedule-item__month {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.schedule-item__body {
+  flex: 1;
+}
+
+.schedule-item__title {
+  margin: 0 0 var(--space-1);
+}
+
+.schedule-item__meta {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.schedule-item__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* -------------------------------------------------------------------------
+   2. EMPTY STATE
+   Use on a <li> or wrapping <div> when the student has no registrations.
+   ------------------------------------------------------------------------- */
+.schedule-empty {
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  color: var(--color-text-muted);
+}

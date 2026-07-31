@@ -1,0 +1,30 @@
+/* =========================================================================
+   NSBM EventHub — categories.css
+   Purpose: Styles for the manage-categories page: add-category form and
+   categories table.
+   Owner: Member 3
+   Used by: manage-categories.html
+   Loaded after style.css and before responsive.css.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. ADD CATEGORY FORM
+   Base .inline-form styling lives in style.css; page tweaks only.
+   ------------------------------------------------------------------------- */
+.main--categories .inline-form {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+/* -------------------------------------------------------------------------
+   2. CATEGORIES TABLE
+   ------------------------------------------------------------------------- */
+.main--categories .data-table tbody tr:hover {
+  background-color: var(--color-primary-light);
+}
+
+.main--categories .data-table td:nth-child(2) {
+  color: var(--color-text-muted);
+}
