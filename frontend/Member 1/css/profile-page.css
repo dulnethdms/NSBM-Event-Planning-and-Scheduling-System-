@@ -1,4 +1,4 @@
-/* Consolidated page stylesheet: reports.css */
+/* Consolidated page stylesheet: profile-page.css */
 
 /* =========================================================================
    NSBM EventHub — GLOBAL BASE STYLES (style.css)
@@ -404,62 +404,69 @@ textarea:focus {
 
 
 /* =========================================================================
-   NSBM EventHub — reports.css
-   Purpose: Styles for the reports page: report stat cards, chart
-   placeholder, performance table.
-   Owner: Member 4
-   Used by: reports.html
+   NSBM EventHub — profile.css
+   Purpose: Styles for the student profile summary and edit-profile form.
+   Owner: Member 1
+   Used by: profile.html
    Loaded after style.css and before responsive.css.
    ========================================================================= */
 
 /* -------------------------------------------------------------------------
-   1. STAT CARDS
-   Base .stat-card styling lives in style.css; page tweak only.
+   1. PROFILE SUMMARY HEADER
    ------------------------------------------------------------------------- */
-.main--reports .stat-card {
-  border-top: 3px solid var(--color-accent);
+.profile-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-4);
 }
 
-/* -------------------------------------------------------------------------
-   2. CHART PLACEHOLDER
-   Swap this block out for a real chart (e.g. <canvas> or an <img>) once
-   reporting data is wired up.
-   ------------------------------------------------------------------------- */
-.chart-placeholder {
-  height: 260px;
+.profile-summary__avatar {
+  flex-shrink: 0;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--color-primary-light),
-    var(--color-primary-light) 10px,
-    var(--color-surface) 10px,
-    var(--color-surface) 20px
-  );
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.profile-summary h1 {
+  margin-bottom: var(--space-1);
+}
+
+.profile-summary__meta {
   color: var(--color-text-muted);
-  font-weight: 600;
+  margin: 0;
 }
 
 /* -------------------------------------------------------------------------
-   3. PERFORMANCE TABLE
+   2. EDIT PROFILE FORM
    ------------------------------------------------------------------------- */
-.main--reports .data-table tbody tr:hover {
-  background-color: var(--color-primary-light);
+.profile-form {
+  max-width: 560px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.profile-form .btn {
+  margin-top: var(--space-2);
 }
 
 /* -------------------------------------------------------------------------
-   4. PRINT
-   Report pages are the most likely to be printed/exported — see the
-   @media print rules in responsive.css for header/footer hiding.
+   3. STATES
    ------------------------------------------------------------------------- */
-@media print {
-  .chart-placeholder {
-    border: 1px solid #000;
-    background: none;
-  }
+.profile-form input:focus {
+  box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.15);
 }
 
 

@@ -1,9 +1,0 @@
-/* Copied shared style.css into Member 4 css folder */
-:root{--color-primary:#1b4d3e;--color-primary-dark:#123529;--color-primary-light:#e7f0ec;--color-accent:#d98e04;--color-accent-dark:#b5730a;--color-bg:#f7f8f6;--color-surface:#ffffff;--color-border:#dde3e0;--color-text:#1f2623;--color-text-muted:#5b655f;--color-text-inverse:#ffffff}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;font-family:var(--font-body);color:var(--color-text);background-color:var(--color-bg);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
-img,picture,svg{max-width:100%;display:block}
-a{color:var(--color-primary);text-decoration:none}a:hover{text-decoration:underline}
-
-/* End of shared stylesheet copy for Member 4 */

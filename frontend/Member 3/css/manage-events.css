@@ -1,4 +1,4 @@
-/* Consolidated page stylesheet: reports.css */
+/* Consolidated page stylesheet: manage-events.css */
 
 /* =========================================================================
    NSBM EventHub — GLOBAL BASE STYLES (style.css)
@@ -404,62 +404,51 @@ textarea:focus {
 
 
 /* =========================================================================
-   NSBM EventHub — reports.css
-   Purpose: Styles for the reports page: report stat cards, chart
-   placeholder, performance table.
-   Owner: Member 4
-   Used by: reports.html
+   NSBM EventHub — events-admin.css
+   Purpose: Styles for admin event management: create/edit event forms
+   and the manage-events data table.
+   Owner: Member 3
+   Used by: create-event.html, edit-event.html, manage-events.html
    Loaded after style.css and before responsive.css.
    ========================================================================= */
 
 /* -------------------------------------------------------------------------
-   1. STAT CARDS
-   Base .stat-card styling lives in style.css; page tweak only.
+   1. CREATE / EDIT EVENT FORM
    ------------------------------------------------------------------------- */
-.main--reports .stat-card {
-  border-top: 3px solid var(--color-accent);
-}
-
-/* -------------------------------------------------------------------------
-   2. CHART PLACEHOLDER
-   Swap this block out for a real chart (e.g. <canvas> or an <img>) once
-   reporting data is wired up.
-   ------------------------------------------------------------------------- */
-.chart-placeholder {
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--color-primary-light),
-    var(--color-primary-light) 10px,
-    var(--color-surface) 10px,
-    var(--color-surface) 20px
-  );
-  border: 1px dashed var(--color-border);
+.event-form {
+  max-width: 640px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  color: var(--color-text-muted);
-  font-weight: 600;
+  padding: var(--space-5);
+}
+
+.event-form textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.event-form input[type="file"] {
+  padding: var(--space-2);
+  background-color: var(--color-primary-light);
+  border-style: dashed;
+}
+
+.event-form .form-actions {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
 }
 
 /* -------------------------------------------------------------------------
-   3. PERFORMANCE TABLE
+   2. MANAGE EVENTS TABLE
+   Base .data-table styling lives in style.css; page-specific tweaks only.
    ------------------------------------------------------------------------- */
-.main--reports .data-table tbody tr:hover {
+.main--events-admin .data-table tbody tr:hover {
   background-color: var(--color-primary-light);
 }
 
-/* -------------------------------------------------------------------------
-   4. PRINT
-   Report pages are the most likely to be printed/exported — see the
-   @media print rules in responsive.css for header/footer hiding.
-   ------------------------------------------------------------------------- */
-@media print {
-  .chart-placeholder {
-    border: 1px solid #000;
-    background: none;
-  }
+.main--events-admin .data-table__actions .btn {
+  white-space: nowrap;
 }
 
 

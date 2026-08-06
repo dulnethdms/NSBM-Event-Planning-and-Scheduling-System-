@@ -1,4 +1,4 @@
-/* Consolidated page stylesheet: reports.css */
+/* Consolidated page stylesheet: admin-dashboard.css */
 
 /* =========================================================================
    NSBM EventHub — GLOBAL BASE STYLES (style.css)
@@ -400,66 +400,6 @@ textarea:focus {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
-}
-
-
-/* =========================================================================
-   NSBM EventHub — reports.css
-   Purpose: Styles for the reports page: report stat cards, chart
-   placeholder, performance table.
-   Owner: Member 4
-   Used by: reports.html
-   Loaded after style.css and before responsive.css.
-   ========================================================================= */
-
-/* -------------------------------------------------------------------------
-   1. STAT CARDS
-   Base .stat-card styling lives in style.css; page tweak only.
-   ------------------------------------------------------------------------- */
-.main--reports .stat-card {
-  border-top: 3px solid var(--color-accent);
-}
-
-/* -------------------------------------------------------------------------
-   2. CHART PLACEHOLDER
-   Swap this block out for a real chart (e.g. <canvas> or an <img>) once
-   reporting data is wired up.
-   ------------------------------------------------------------------------- */
-.chart-placeholder {
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--color-primary-light),
-    var(--color-primary-light) 10px,
-    var(--color-surface) 10px,
-    var(--color-surface) 20px
-  );
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius-md);
-  color: var(--color-text-muted);
-  font-weight: 600;
-}
-
-/* -------------------------------------------------------------------------
-   3. PERFORMANCE TABLE
-   ------------------------------------------------------------------------- */
-.main--reports .data-table tbody tr:hover {
-  background-color: var(--color-primary-light);
-}
-
-/* -------------------------------------------------------------------------
-   4. PRINT
-   Report pages are the most likely to be printed/exported — see the
-   @media print rules in responsive.css for header/footer hiding.
-   ------------------------------------------------------------------------- */
-@media print {
-  .chart-placeholder {
-    border: 1px solid #000;
-    background: none;
-  }
 }
 
 

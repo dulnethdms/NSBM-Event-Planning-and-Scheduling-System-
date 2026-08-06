@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events · NSBM EventHub</title>
-  <meta name="description" content="Browse and filter all NSBM university events." />
-  <link rel="stylesheet" href="css/events.css" />
+  <title>Home · NSBM EventHub</title>
+  <meta name="description" content="Your starting point for NSBM university events." />
+  <link rel="stylesheet" href="css/index.css" />
 </head>
-<body class="page-events">
+<body class="page-home">
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <nav class="navbar" aria-label="Primary navigation">
@@ -24,8 +24,8 @@
         </button>
       </div>
       <ul id="primary-menu" class="navbar__menu">
-        <li><a href="/Member 1/index.html">Home</a></li>
-        <li><a href="/Member 2/events.html" aria-current="page">Events</a></li>
+        <li><a href="/Member 1/index.html" aria-current="page">Home</a></li>
+        <li><a href="/Member 2/events.html">Events</a></li>
         <li><a href="/Member 2/my-schedule.html">My Schedule</a></li>
         <li><a href="/Member 1/profile.html">Profile</a></li>
         <li><a href="/Member 1/login.html" class="navbar__link--logout">Log out</a></li>
@@ -33,70 +33,53 @@
     </nav>
   </header>
 
-  <main id="main-content" class="main main--events">
-    <!-- Page heading + search/filter toolbar -->
-    <section class="page-heading">
-      <h1>Explore events</h1>
-      <p>Find events by category, date or venue and add them to your schedule.</p>
+  <main id="main-content" class="main main--home">
+    <!-- Hero / welcome banner -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__text">
+        <p class="hero__eyebrow">NSBM Green University</p>
+        <h1 id="hero-heading">Discover what's happening on campus</h1>
+        <p class="hero__lead">Browse workshops, seminars, sports fixtures and society events, then build your own schedule.</p>
+        <div class="hero__actions">
+          <a href="/Member 2/events.html" class="btn btn--primary">Browse events</a>
+          <a href="/Member 2/my-schedule.html" class="btn btn--secondary">View my schedule</a>
+        </div>
+      </div>
     </section>
-    <section class="events-toolbar" aria-label="Filter events">
-      <form class="events-toolbar__form" role="search" action="#" method="get">
-        <div class="form-field">
-          <label for="event-search">Search events</label>
-          <input type="search" id="event-search" name="q" placeholder="Search by event name" />
-        </div>
-        <div class="form-field">
-          <label for="category-filter">Category</label>
-          <select id="category-filter" name="category">
-            <option value="">All categories</option>
-            <option value="academic">Academic</option>
-            <option value="sports">Sports</option>
-            <option value="cultural">Cultural</option>
-            <option value="workshop">Workshop</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label for="date-filter">Date</label>
-          <input type="date" id="date-filter" name="date" />
-        </div>
-        <button type="submit" class="btn btn--primary">Apply filters</button>
-      </form>
-    </section>
-    <!-- Event listing grid -->
-    <section class="section" aria-labelledby="events-list-heading">
-      <h2 id="events-list-heading" class="sr-only">Event results</h2>
+    <!-- Upcoming events preview -->
+    <section class="section" aria-labelledby="upcoming-heading">
+      <div class="section__header">
+        <h2 id="upcoming-heading">Upcoming events</h2>
+        <a href="/Member 2/events.html" class="section__link">See all events</a>
+      </div>
       <div class="card-grid" role="list">
         <article class="event-card" role="listitem">
           <p class="event-card__date">Placeholder date</p>
           <h3 class="event-card__title">Placeholder event title</h3>
           <p class="event-card__meta">Placeholder venue &middot; Placeholder category</p>
-          <a href="event-details.html" class="btn btn--outline btn--small">View details</a>
+          <a href="/Member 2/event-details.html" class="btn btn--outline btn--small">View details</a>
         </article>
         <article class="event-card" role="listitem">
           <p class="event-card__date">Placeholder date</p>
           <h3 class="event-card__title">Placeholder event title</h3>
           <p class="event-card__meta">Placeholder venue &middot; Placeholder category</p>
-          <a href="event-details.html" class="btn btn--outline btn--small">View details</a>
+          <a href="/Member 2/event-details.html" class="btn btn--outline btn--small">View details</a>
         </article>
         <article class="event-card" role="listitem">
           <p class="event-card__date">Placeholder date</p>
           <h3 class="event-card__title">Placeholder event title</h3>
           <p class="event-card__meta">Placeholder venue &middot; Placeholder category</p>
-          <a href="event-details.html" class="btn btn--outline btn--small">View details</a>
-        </article>
-        <article class="event-card" role="listitem">
-          <p class="event-card__date">Placeholder date</p>
-          <h3 class="event-card__title">Placeholder event title</h3>
-          <p class="event-card__meta">Placeholder venue &middot; Placeholder category</p>
-          <a href="event-details.html" class="btn btn--outline btn--small">View details</a>
+          <a href="/Member 2/event-details.html" class="btn btn--outline btn--small">View details</a>
         </article>
       </div>
-      <nav class="pagination" aria-label="Event results pages">
-        <a href="#" class="pagination__link" aria-current="page">1</a>
-        <a href="#" class="pagination__link">2</a>
-        <a href="#" class="pagination__link">3</a>
-        <a href="#" class="pagination__link pagination__link--next">Next</a>
-      </nav>
+    </section>
+    <!-- Announcements strip -->
+    <section class="section section--muted" aria-labelledby="announcements-heading">
+      <h2 id="announcements-heading">Announcements</h2>
+      <ul class="announcement-list">
+        <li class="announcement-list__item">Placeholder announcement text goes here.</li>
+        <li class="announcement-list__item">Placeholder announcement text goes here.</li>
+      </ul>
     </section>
 
   </main>
@@ -116,10 +99,8 @@
         <p class="site-footer__copy">&copy; 2026 NSBM Green University. All rights reserved.</p>
       </div>
     </footer>
-  <script src="js/main.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
-
-
 
 

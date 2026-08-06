@@ -3,7 +3,7 @@
    Purpose: Styles for the student home page: hero banner, upcoming events
    preview, announcements strip.
    Owner: Member 2
-   Used by: home.html
+   Used by: index.html
    Loaded after style.css and before responsive.css.
    ========================================================================= */
 
@@ -101,3 +101,4 @@
   border-radius: 50%;
   background-color: var(--color-accent);
 }
+
