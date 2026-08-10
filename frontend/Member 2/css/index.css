@@ -201,5 +201,10 @@ h3 { font-size: 1.2rem; }
     align-items: center;
   }
 }
-.site-footer__title { font-weight: 700; }
-.site-footer__copy { font-size: 0.85rem; color: #5b655f; }
+.site-footer__title { 
+  font-weight: 700; 
+}
+.site-footer__copy { 
+  font-size: 0.85rem; 
+  color: #5b655f; 
+}

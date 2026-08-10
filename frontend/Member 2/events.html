@@ -8,32 +8,24 @@
   <link rel="stylesheet" href="css/events.css" />
 </head>
 <body class="page-events">
-  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <nav class="navbar" aria-label="Primary navigation">
       <div class="navbar__brand">
         <a href="/Member 1/index.html" class="navbar__logo">
           <span class="navbar__logo-mark" aria-hidden="true">NE</span>
-          NSBM EventHub
-        </a>
-        <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
-          <span class="sr-only">Toggle navigation menu</span>
-          <span class="navbar__toggle-bar" aria-hidden="true"></span>
-          <span class="navbar__toggle-bar" aria-hidden="true"></span>
-          <span class="navbar__toggle-bar" aria-hidden="true"></span>
-        </button>
+          NSBM EventHub</a>
       </div>
-      <ul id="primary-menu" class="navbar__menu">
-        <li><a href="/Member 1/index.html">Home</a></li>
-        <li><a href="/Member 2/events.html" aria-current="page">Events</a></li>
-        <li><a href="/Member 2/my-schedule.html">My Schedule</a></li>
-        <li><a href="/Member 1/profile.html">Profile</a></li>
-        <li><a href="/Member 1/login.html" class="navbar__link--logout">Log out</a></li>
-      </ul>
+      <div class="nav">
+        <a class="navbutton" href="/Member 1/index.html" aria-current="page">Home</a>
+        <a class="navbutton" href="/Member 2/events.html">Events</a>
+        <a class="navbutton" href="/Member 2/my-schedule.html">My Schedule</a>
+        <a class="navbutton" href="/Member 1/profile.html">Profile</a>
+        <a class="navbutton" href="/Member 1/login.html" class="navbar__link--logout">Log out</a>
+      </div>
     </nav>
   </header>
 
-  <main id="main-content" class="main main--events">
+  <main class="main">
     <!-- Page heading + search/filter toolbar -->
     <section class="page-heading">
       <h1>Explore events</h1>
@@ -63,28 +55,28 @@
       </form>
     </section>
     <!-- Event listing grid -->
-    <section class="section" aria-labelledby="events-list-heading">
-      <h2 id="events-list-heading" class="sr-only">Event results</h2>
-      <div class="card-grid" role="list">
-        <article class="event-card" role="listitem">
+    <section class="events">
+      <h2>Event results</h2>
+      <div class="card-grid" >
+        <article class="event-card" >
           <p class="event-card__date">Placeholder date</p>
           <h3 class="event-card__title">Placeholder event title</h3>
           <p class="event-card__meta">Placeholder venue &middot; Placeholder category</p>
           <a href="event-details.html" class="btn btn--outline btn--small">View details</a>
         </article>
-        <article class="event-card" role="listitem">
+        <article class="event-card">
           <p class="event-card__date">Placeholder date</p>
           <h3 class="event-card__title">Placeholder event title</h3>
           <p class="event-card__meta">Placeholder venue &middot; Placeholder category</p>
           <a href="event-details.html" class="btn btn--outline btn--small">View details</a>
         </article>
-        <article class="event-card" role="listitem">
+        <article class="event-card">
           <p class="event-card__date">Placeholder date</p>
           <h3 class="event-card__title">Placeholder event title</h3>
           <p class="event-card__meta">Placeholder venue &middot; Placeholder category</p>
           <a href="event-details.html" class="btn btn--outline btn--small">View details</a>
         </article>
-        <article class="event-card" role="listitem">
+        <article class="event-card">
           <p class="event-card__date">Placeholder date</p>
           <h3 class="event-card__title">Placeholder event title</h3>
           <p class="event-card__meta">Placeholder venue &middot; Placeholder category</p>
@@ -107,12 +99,7 @@
           <p class="site-footer__title">NSBM EventHub</p>
           <p class="site-footer__tagline">Plan, discover and manage university events in one place.</p>
         </div>
-        <nav class="site-footer__links" aria-label="Footer navigation">
-          <a href="/Member 1/index.html">Home</a>
-          <a href="/Member 2/events.html">Events</a>
-          <a href="/Member 2/my-schedule.html">My Schedule</a>
-          <a href="/Member 1/profile.html">Profile</a>
-        </nav>
+        
         <p class="site-footer__copy">&copy; 2026 NSBM Green University. All rights reserved.</p>
       </div>
     </footer>
